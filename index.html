@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
 </head>
+
 <body>
   <header class="header">
     <div class="header-bg">
@@ -111,7 +112,7 @@
       </section>
       <section class="popular">
         <div class="popular__block">
-          <h1 class="popular__title">популярные товары</h1>
+          <h2 class="popular__title">популярные товары</h2>
           <button class="popular__block-btn btn">все популярные товары</button>
         </div>
         <div class="popular__goods">
@@ -143,65 +144,86 @@
       </section>
       <section class="brand">
         <div class="brand__block">
-          <div class="brand__block-title"></div>
+          <h2 class="brand__block-title">популярные производители:</h2>
           <button class="brand__btn btn">все производители</button>
         </div>
         <div class="brand__catalog">
           <article class="brand__item">
-            <img class="brand__img" src="" alt="BOSCH">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/bosch.png" alt="BOSCH">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="MAKITA">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/Makita.png" alt="MAKITA">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="DeWALT">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/DeWALT.png" alt="DeWALT">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="ИНТЕРСКОЛ">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/Интерскол.png" alt="ИНТЕРСКОЛ">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="HITACHI">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/Hitachi.png" alt="HITACHI">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="LG">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/LG.png" alt="LG">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="AEG">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/AEG.png" alt="AEG">
+            </a>
           </article>
           <article class="brand__item">
-            <img class="brand__img" src="" alt="METABO">
+            <a class="brand__link" href="">
+              <img class="brand__img" src="img/Metabo.png" alt="METABO">
+            </a>
           </article>
         </div>
       </section>
-      <section class="services">
+    </div>
+    <section class="services">
+      <div class="container">
         <h2 class="services__title">сервисы</h2>
         <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services__block">
           <ul class="services__list">
-            <li class="services-item">
-              <a class="services-link" href="">Доставка</a>
+            <li class="services__item">
+              <a class="services__link services__active" href="">Доставка</a>
             </li>
-            <li class="services-item">
-              <a class="services-link" href="">Гарантия</a>
+            <li class="services__item">
+              <a class="services__link" href="">Гарантия</a>
             </li>
-            <li class="services-item">
-              <a class="services-link" href="">Кредит</a>
+            <li class="services__item">
+              <a class="services__link" href="">Кредит</a>
             </li>
           </ul>
           <div class="services__desc">
-            <h2 class="services__desc-title">Доставка</h2>
+            <h2 class="services__desc-title">доставка</h2>
             <p class="services__desc-text">
               Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,
+              Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!
             </p>
+            <img class="services__img" src="img/Layer_131.png" alt="">
           </div>
         </div>
-      </section>
-      <section class="info">
+      </div>
+    </section>
+    <section class="info">
+      <div class="container">
         <div class="about">
           <h2 class="about__title">КОМПАНИЯ «Техномарт»</h2>
           <p class="about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
@@ -222,8 +244,9 @@
           <img src="" alt="карта">
           <button class="contacts__btn btn">заблудились? напишите нам!</button>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
   </main>
   <footer class="footer">
     <div class="container">
@@ -270,7 +293,7 @@
       </ul>
       <div class="socials">
         <p class="socials__info">© 2010–2017 Компания «Техномарт»
-            Все права защищены</p>
+          Все права защищены</p>
         <ul class="socials__list">
           <li class="socials__list-item">
             <a href="">VK</a>
@@ -283,11 +306,11 @@
           </li>
         </ul>
         <p class="socials__text">
-            Обратная связь:
+          Обратная связь:
           <span>mail@htmlacademy.ru</span>
         </p>
         <p class="socials__text">
-            Разработано —
+          Разработано —
           <span>htmlacademy.ru</span>
         </p>
       </div>
