@@ -62,11 +62,25 @@ button {
   padding: 0 55px;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.page__logo:hover {
+  background-color: #ca2c37;
+}
+
+.page__logo:focus {
+  background-color: #ba2732;
 }
 
 .input-header {
   background: transparent;
   border: none;
+}
+
+.input-header:hover {
+  background-color: #212a3a;
 }
 
 .user-interface {
@@ -80,10 +94,31 @@ button {
 }
 
 .user__item {
-  margin-right: 30px;
+  width: 150px;
   height: 100%;
   display: flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.user__item--color{
+  background-color: #63a63e;
+}
+
+.user__item--color:hover{
+  background-color: #5fbb2d;
+}
+
+.user__item--color:active{
+  background-color: #63a63e;
+}
+.user__item:hover {
+  background-color: #212a3a;
+}
+
+.user__item:active {
+  background-color: #161d29;
 }
 
 .user__item:last-child {
@@ -92,6 +127,11 @@ button {
 
 .user__link-item {
   color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container--header-inf {
@@ -110,6 +150,7 @@ button {
 
 .header__contacts {
   margin-left: auto;
+  margin-right: 69px;
 }
 
 .header-btn {
@@ -117,6 +158,14 @@ button {
   height: 45px;
   background: #fff;
   margin-right: 10px;
+}
+
+.header-btn:hover{
+  color: #ee3643;
+}
+
+.header-btn:active{
+  opacity: 0.3;
 }
 
 .header-btn:last-child {
@@ -130,10 +179,17 @@ button {
   width: 270px;
   height: 45px;
   border: 3px solid #ffffff;
+  color: #e9292a;
+  font-size: 21px;
 }
 
 .header-tel {
   margin: 0;
+}
+
+.header-adress{
+  color: #32425c;
+  font-size: 14px;
 }
 
 .header__menu {
@@ -158,6 +214,13 @@ button {
   color: #fff;
 }
 
+.header__menu-link:hover{
+  background-color: #293449;
+}
+
+.header__menu-link:active{
+  opacity: 0.5;
+}
 /*main*/
 
 .main {
@@ -232,6 +295,14 @@ button {
   color: #fff;
 }
 
+.categories-btn:hover{
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.categories-btn:active{
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .btn {
   border-radius: 2px;
 }
@@ -244,6 +315,17 @@ button {
   margin-top: auto;
 }
 
+.red-btn{
+  color: #fff;
+}
+
+.red-btn:hover{
+  background-color: #ca2c37;
+}
+
+.red-btn:active{
+  background-color: #ba2732;
+}
 /*popukar*/
 
 .popular__block {
@@ -372,6 +454,14 @@ button {
   border: 1px solid #eaeaea;
   background-color: #ffffff;
   margin-bottom: 20px;
+}
+
+.brand__item:hover{
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.brand__item:active{
+  opacity: 0.3;
 }
 
 .brand__link {
@@ -521,7 +611,7 @@ button {
 }
 
 .contacts__btn {
-  width: 253px;
+  width: 300px;
   height: 38px;
   background-color: #ee3643;
   margin-top: 37px;
@@ -592,11 +682,11 @@ button {
   color: #fff;
 }
 
-.socials__list{
+.socials__list {
   display: flex;
 }
 
-.socials__list-item{
+.socials__list-item {
   position: relative;
   z-index: 5;
   width: 41px;
@@ -609,10 +699,10 @@ button {
   margin-right: 4px;
 }
 
-.socials__list-item:last-child{
+.socials__list-item:last-child {
   margin-right: 0;
 }
 
-.socials--color{
-  color:#ffd180;
+.socials--color {
+  color: #ffd180;
 }
