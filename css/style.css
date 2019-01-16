@@ -18,6 +18,14 @@ a {
   color: #000000;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 button {
   padding: 0;
   border: none;
@@ -25,6 +33,19 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+
+.btn {
+  height: 38px;
+  margin-bottom: 21px;
+  margin-top: auto;
+  font-size: 17px;
+  position: relative;
+  text-transform: uppercase;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -256,7 +277,7 @@ button {
 }
 
 .header-btn {
-  width: 121px;
+  padding: 0 14px 0 27px;
   height: 45px;
   background: #fff;
   margin-right: 10px;
@@ -316,7 +337,7 @@ button {
   background-image: url(../img/icon-login.svg);
   width: 20px;
   height: 17px;
-  left: 10px;
+  left: 3px;
 }
 
 .header__menu {
@@ -550,7 +571,7 @@ button {
 }
 
 .popular-hidden {
-  height: 115px;
+  padding-top: 26px;
   width: 200px;
   background: #fff;
   position: absolute;
@@ -986,19 +1007,343 @@ button {
 
 /*catalog*/
 
+.main-catalog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__nav {
+  width: 940px;
+  padding: 25px 0;
+}
+
+.main__nav-list {
+
+  display: flex;
+}
+
 .main__nav-link {
-  margin-left: 18px;
+  margin-right: 18px;
   text-transform: uppercase;
   position: relative;
 }
 
-.main__nav-link::before {
+.main__nav-item--arrow {
+  position: relative;
+}
+
+.main__nav-item--arrow::before {
   content: "";
   display: block;
   position: absolute;
   background-image: url(../img/icon-right-small.svg);
   width: 8px;
   height: 12px;
-  margin-right: 15px;
-  
+  top: 2px;
+  left: -12px;
+}
+
+.catalog__title {
+  width: 940px;
+  padding: 32px 0 34px 30px;
+  background-color: #f2f6f8;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.catalog__wrapper {
+  width: 940px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog__filter {
+  width: 100%;
+}
+
+.catalog__filter {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.filer__wrapper {
+  display: flex;
+  background-color: #f7f3ec;
+  width: 700px;
+}
+
+.sort__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0 15px 18px;
+  width: 354px;
+  text-transform: uppercase;
+  margin-right: 46px;
+}
+
+.sort__list-item a {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.sort__list-item--active a {
+  color: #ee3643;
+  opacity: 1;
+}
+
+.sort__arrow {
+  display: flex;
+}
+
+.filter__title {
+  width: 220px;
+  background-color: #f7f3ec;
+  padding: 14px 0 15px 18px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.filter__sort-title {
+  margin: 0;
+  padding: 14px 0 15px 19px;
+  margin-right: 139px;
+  text-transform: uppercase;
+}
+
+.catalog__settings {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.catalog__goods {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+}
+
+.popular__item--goods {
+  margin-bottom: 20px;
+}
+
+.popular__item--goods:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.pagination {
+  width: 700px;
+  margin-top: 52px;
+  margin-bottom: 60px;
+}
+
+.pagination__list {
+  display: flex;
+}
+
+.pagination-btn {
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  width: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.pagination-btn:hover {
+  background-color: #ee3643;
+  color: #fff;
+}
+
+.pagination-btn--next {
+  width: 140px;
+}
+
+.pagination-btn--active {
+  background-color: #ee3643;
+  color: #fff;
+}
+
+.description {
+  background-color: #f2f6f8;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 67px 0 73px 0;
+}
+
+.description__title {
+  width: 940px;
+  text-transform: uppercase;
+}
+
+.description__text {
+  width: 940px;
+}
+
+.setting__item {
+  border: none;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  min-inline-size: 0;
+}
+
+.price__point {
+  position: relative;
+}
+
+.price__point::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  background-image: url(../img/filter-button.svg);
+  width: 20px;
+  height: 22px;
+  bottom: -11px;
+  right: 164px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.price__point:last-child::before {
+  right: 30px;
+}
+
+.setting__price {
+  width: 220px;
+  height: 80px;
+  background-color: #f7f3ec;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price__line::before {
+  content: "";
+  display: flex;
+  width: 140px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.price__line {
+  width: 180px;
+  height: 2px;
+  background-color: #d7dcde;
+  z-index: 5;
+}
+
+.setting__item:nth-child(even) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.setting__item:first-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.setting__title {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+
+.setting__value {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.setting__value::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: #444444;
+  left: 104px;
+  top: 35px;
+}
+
+.value__text {
+  width: 95px;
+  height: 38px;
+  background-color: #f7f3ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox__item {
+  margin-bottom: 17px;
+}
+
+.checkbox__label {
+  position: relative;
+  margin-left: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.checkbox__label::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  background-image: url(../img/checkbox-off.svg);
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked+.checkbox__label::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-size: contain;
+  background: url(../img/checkbox-on.svg) no-repeat;
+}
+
+.radio-item {
+  margin-bottom: 17px;
+}
+
+.radio__label {
+  margin-left: 35px;
+  text-transform: uppercase;
+}
+
+.radio__label::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background: url(../img/radio-off.svg) no-repeat;
+}
+
+input[type="radio"]:checked+.radio__label::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background: url(../img/radio-on.svg) no-repeat;
+}
+
+.setting-btn {
+  margin-top: 83px;
+  width: 140px;
+  height: 38px;
+  border: 1px solid #e5e5e5;
 }
