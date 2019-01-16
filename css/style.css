@@ -1,5 +1,59 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PTSans-Regular'), url('../fonts/ptsans.woff2') format('woff2'), url('../fonts/ptsans.woff') format('woff'), url('../fonts/ptsans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url('../fonts/ptsansbold.woff2') format('woff2'), url('../fonts/ptsansbold.woff') format('woff'), url('../fonts/ptsansbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum'), local('Cuprum-Regular'), url('../fonts/cuprum.woff2') format('woff2'), url('../fonts/cuprum.woff') format('woff'), url('../fonts/cuprum.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum Italic'), local('Cuprum-Italic'), url('../fonts/cuprumitalic.woff2') format('woff2'), url('../fonts/cuprumitalic.woff') format('woff'), url('../fonts/cuprumitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum Bold'), local('Cuprum-Bold'), url('../fonts/cuprumbold.woff2') format('woff2'), url('../fonts/cuprumbold.woff') format('woff'), url('../fonts/cuprumbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'), url('../fonts/cuprumbolditalic.woff2') format('woff2'), url('../fonts/cuprumbolditalic.woff') format('woff'), url('../fonts/cuprumbolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Myriad Pro Light Italic';
+  src: url('../fonts/MyriadPro-LightIt.eot');
+  src: url('../fonts/MyriadPro-LightIt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro-LightIt.woff') format('woff'),
+    url('../fonts/MyriadPro-LightIt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   box-sizing: border-box;
+  font-family: "PT Sans";
+  font-weight: 400;
 }
 
 * {
@@ -37,8 +91,6 @@ button {
 
 .btn {
   height: 38px;
-  margin-bottom: 21px;
-  margin-top: auto;
   font-size: 17px;
   position: relative;
   text-transform: uppercase;
@@ -77,6 +129,9 @@ button {
 }
 
 .page__logo {
+  font-family: "Cuprum";
+  font-size: 24px;
+  line-height: 24px;
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
   background-color: #ee3643;
   min-height: 47px;
@@ -108,6 +163,24 @@ button {
   opacity: 0.3;
 }
 
+.input-header::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.input-header::-moz-placeholder {
+  color: #fff;
+}
+
+/* Firefox 19+ */
+.input-header:-moz-placeholder {
+  color: #fff;
+}
+
+/* Firefox 18- */
+.input-header:-ms-input-placeholder {
+  color: #fff;
+}
+
 .user__item--search {
   position: relative;
 }
@@ -130,6 +203,7 @@ button {
   opacity: 0.3;
   top: 11px;
   left: 13px;
+  cursor: pointer;
 }
 
 .user__item--basket::before {
@@ -142,6 +216,7 @@ button {
   opacity: 0.3;
   top: 11px;
   left: 13px;
+  cursor: pointer;
 }
 
 .input-header::placeholder {
@@ -206,6 +281,10 @@ button {
 }
 
 .user-interface {
+  font-family: "Cuprum";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
   display: flex;
   align-items: center;
   margin-top: 0;
@@ -264,6 +343,10 @@ button {
 }
 
 .header__title {
+  font-family: "Cuprum";
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
   font-size: 16px;
   color: #ee3643;
   width: 206px;
@@ -277,10 +360,15 @@ button {
 }
 
 .header-btn {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
   padding: 0 14px 0 27px;
   height: 45px;
   background: #fff;
   margin-right: 10px;
+  text-transform: none;
 }
 
 .header-btn:hover {
@@ -296,6 +384,8 @@ button {
 }
 
 .header-tel {
+  font-size: 21px;
+  line-height: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,11 +412,16 @@ button {
 }
 
 .header-adress {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
   color: #32425c;
   font-size: 14px;
 }
 
 .header-btn {
+
   position: relative;
 }
 
@@ -354,6 +449,10 @@ button {
 }
 
 .header__menu-link {
+  font-family: "Cuprum";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 17px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -502,16 +601,28 @@ button {
   background: url(../img/Layer_99.png);
 }
 
+.categories__title {
+  font-family: "Cuprum";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
 .categories__title--slider {
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
 .categories-btn {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   width: 135px;
   height: 38px;
   background: rgba(0, 0, 0, 0.1);
   color: #fff;
+  border: none;
 }
 
 .categories-btn:hover {
@@ -527,11 +638,16 @@ button {
 }
 
 .slider-btn {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   background-color: #ee3643;
   width: 195px;
   height: 38px;
   border-radius: 2px;
   margin-top: auto;
+  border: none;
 }
 
 .red-btn {
@@ -561,10 +677,19 @@ button {
 }
 
 .popular__title {
+  color: #32425c;
+  font-family: "Cuprum";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
-.popular__block-btn {
+.popular__btn {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   width: 253px;
   height: 38px;
   background-color: #ee3643;
@@ -584,6 +709,10 @@ button {
 }
 
 .popular__btn--green {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   width: 135px;
   height: 38px;
   box-shadow: inset 0 -3px 0 #367315;
@@ -595,9 +724,38 @@ button {
   line-height: 18px;
   text-transform: uppercase;
   margin-bottom: 7px;
+  position: relative;
+}
+
+.popular__btn--green:hover{
+  background-color: #5fbb2d;
+}
+
+.popular__btn--green:active{
+  background-color: #518534;
+}
+
+.popular__btn--green:hover::before{
+  opacity: 1;
+}
+
+.popular__btn--green::before{
+  content: "";
+  display: flex;
+  position: absolute;
+  background-image: url(../img/icon-cart.svg);
+  width: 15px;
+  height: 15px;
+  left: 20px;
+  opacity: 0.3;
 }
 
 .popular__btn--brd {
+  color: #32425c;
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   width: 135px;
   height: 38px;
   border: 3px solid #63a63e;
@@ -672,14 +830,16 @@ button {
 }
 
 .popular__btn--visible {
-  width: 122px;
+  width: 141px;
   height: 38px;
-  background-color: #ee3643;
+  background-image: url(../img/red-button.svg);
   color: #fff;
   margin-bottom: 21px;
   margin-top: auto;
   font-size: 17px;
   position: relative;
+  background-color: #fff;
+  border: none;
 }
 
 /*brand*/
@@ -697,10 +857,19 @@ button {
 }
 
 .brand__block-title {
+  font-family: "Cuprum";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #32425c;
   text-transform: uppercase;
 }
 
 .brand__btn {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   width: 253px;
   height: 38px;
   background-color: #ee3643;
@@ -753,10 +922,15 @@ button {
 }
 
 .services__title {
+  font-family: "Cuprum";
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .services__text {
+  font-size: 13px;
   width: 500px;
   line-height: 24px;
 }
@@ -781,6 +955,11 @@ button {
 }
 
 .services__link {
+  color: #32425c;
+  font-family: "Cuprum";
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -829,9 +1008,15 @@ button {
 
 .services__desc-text {
   width: 330px;
+  font-size: 13px;
 }
 
 .services__desc-title {
+  color: #32425c;
+  font-family: "Cuprum";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
   text-transform: uppercase;
 }
 
@@ -850,32 +1035,73 @@ button {
 }
 
 .about__title {
-  font-size: 30px;
   margin-bottom: 38px;
+  font-family: "Cuprum";
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .about__text {
   margin-bottom: 38px;
+  font-size: 13px;
+}
+
+.about__list {
+  font-family: "Cuprum";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.about__item {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 24px;
+}
+
+.about__item::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+  left: 0;
+  top: 9px;
 }
 
 .about__btn {
-  width: 253px;
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 220px;
   height: 38px;
   background-color: #ee3643;
-  margin-top: 37px;
 }
 
 .contacts__title {
   font-size: 30px;
   margin-bottom: 38px;
   text-transform: uppercase;
+  font-family: "Cuprum";
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
 }
 
 .contacts__text {
+  font-size: 13px;
   margin-bottom: 38px;
 }
 
 .contacts__btn {
+  font-family: "Cuprum";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   width: 300px;
   height: 38px;
   background-color: #ee3643;
@@ -914,6 +1140,10 @@ button {
   font-size: 18px;
 }
 
+.footer__list-item:first-child {
+  margin-left: 0;
+}
+
 .footer__logo-link {
   width: 100%;
   height: 100%;
@@ -932,6 +1162,10 @@ button {
 }
 
 .footer__list-link {
+  font-family: "Cuprum";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
   color: #f3f7f9;
 }
 
@@ -966,6 +1200,21 @@ button {
 
 .socials__list {
   display: flex;
+}
+
+.socials__info {
+  font-family: "Cuprum";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+
+.socials__text {
+  font-family: "Cuprum";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .socials__list-item {
@@ -1025,6 +1274,9 @@ button {
 }
 
 .main__nav-link {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
   margin-right: 18px;
   text-transform: uppercase;
   position: relative;
@@ -1046,6 +1298,11 @@ button {
 }
 
 .catalog__title {
+  color: #32425c;
+  font-family: "Cuprum";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
   width: 940px;
   padding: 32px 0 34px 30px;
   background-color: #f2f6f8;
@@ -1086,6 +1343,10 @@ button {
 .sort__list-item a {
   color: #000000;
   opacity: 0.3;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: dotted;
 }
 
 .sort__list-item--active a {
@@ -1098,6 +1359,10 @@ button {
 }
 
 .filter__title {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
   width: 220px;
   background-color: #f7f3ec;
   padding: 14px 0 15px 18px;
@@ -1107,6 +1372,10 @@ button {
 }
 
 .filter__sort-title {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
   margin: 0;
   padding: 14px 0 15px 19px;
   margin-right: 139px;
@@ -1152,11 +1421,6 @@ button {
   margin-right: 10px;
 }
 
-.pagination-btn:hover {
-  background-color: #ee3643;
-  color: #fff;
-}
-
 .pagination-btn--next {
   width: 140px;
 }
@@ -1177,10 +1441,17 @@ button {
 
 .description__title {
   width: 940px;
+  font-family: "Cuprum";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
 .description__text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
   width: 940px;
 }
 
@@ -1250,6 +1521,9 @@ button {
 }
 
 .setting__title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 25px;
   padding-top: 25px;
@@ -1300,6 +1574,7 @@ button {
   width: 23px;
   height: 23px;
   cursor: pointer;
+  bottom: -3px;
 }
 
 input[type="checkbox"]:checked+.checkbox__label::before {
@@ -1310,6 +1585,7 @@ input[type="checkbox"]:checked+.checkbox__label::before {
   height: 23px;
   background-size: contain;
   background: url(../img/checkbox-on.svg) no-repeat;
+  bottom: -3px;
 }
 
 .radio-item {
@@ -1317,6 +1593,7 @@ input[type="checkbox"]:checked+.checkbox__label::before {
 }
 
 .radio__label {
+  position: relative;
   margin-left: 35px;
   text-transform: uppercase;
 }
@@ -1329,6 +1606,7 @@ input[type="checkbox"]:checked+.checkbox__label::before {
   height: 25px;
   background-size: contain;
   background: url(../img/radio-off.svg) no-repeat;
+  bottom: -3px;
 }
 
 input[type="radio"]:checked+.radio__label::before {
@@ -1339,6 +1617,7 @@ input[type="radio"]:checked+.radio__label::before {
   height: 25px;
   background-size: contain;
   background: url(../img/radio-on.svg) no-repeat;
+  bottom: -3px;
 }
 
 .setting-btn {
@@ -1346,4 +1625,20 @@ input[type="radio"]:checked+.radio__label::before {
   width: 140px;
   height: 38px;
   border: 1px solid #e5e5e5;
+}
+
+.setting-btn:hover{
+  border: 1px solid #bdc6ca;
+}
+
+.setting-btn:active{
+  border: 1px solid #ee3643;
+}
+
+.pagination-btn:hover{
+  border: 1px solid #bdc6ca;
+}
+
+.pagination-btn:active{
+  border: 1px solid #ee3643;
 }
