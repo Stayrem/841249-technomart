@@ -35,12 +35,24 @@
           строительных материалов
           и инструментов для ремонта
         </h1>
-        <div class="header__contacts">
+        <div class="header__contacts header__contacts--catalog">
           <p class="header-tel">+7 (812) 555-05-55</p>
           <p class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <button class="header-btn header-btn--login btn">Войти</button>
-        <button class="header-btn header-btn--register btn">Регистрация</button>
+        <div class="header__interface">
+          <button class="header-btn header__btn--user btn">Равшан Джамшутович</button>
+          <button class="header-btn header__btn--logout" title="выйти"></button>
+          <ul class="header__interface-list">
+            <li class="header__interface-item">
+              <a class="header__interface-link" href="#">Мои заказы </a>
+
+              </li>
+            <li class="header__interface-item">
+              <a class="header__interface-link" href="#">Личный кабинет </a>
+
+              </li>
+          </ul>
+        </div>
       </div>
       <div class="container">
         <ul class="header__menu">
@@ -120,23 +132,27 @@
               </a>
             </li>
             <li class="sort__list-item">
-              <a class="sort__list-link" href="#">
+              <a class="sort__list-link " href="#">
                 по типу
               </a>
             </li>
             <li class="sort__list-item">
-              <a class="sort__list-link" href="#">
+              <a class="sort__list-link " href="#">
                 по функционалу
               </a>
             </li>
           </ul>
           <ul class="sort__arrow">
             <li class="sort__arrow-item">
-              <a class="sort__arrow-link" href="#">
+              <a class="sort__arrow-link sort__arrow-item--up" href="#">
+                <svg class="sort__arrow-svg" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#231F20" d="M5.5 10L0 0h11" /></svg>
               </a>
             </li>
             <li class="sort__arrow-item">
-              <a class="sort__arrow-link" href="#">
+              <a class="sort__arrow-link sort__arrow-item--down" href="#">
+                <svg class="sort__arrow-svg" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg>
               </a>
             </li>
           </ul>
@@ -151,10 +167,10 @@
               <div class="price__point"></div>
               <div class="price__point"></div>
             </div>
-              <div class="setting__value">
-                <p class="value__text">0</p>
-                <p class="value__text">30000</p>
-              </div>
+            <div class="setting__value">
+              <p class="value__text">0</p>
+              <p class="value__text">30000</p>
+            </div>
           </fieldset>
           <fieldset class="setting__item">
             <legend class="setting__title">производители</legend>
